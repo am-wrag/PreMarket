@@ -5,7 +5,7 @@ namespace PreMarket.Core
 {
     public interface IShoppingCartManager
     {
-        int TotalPrice { get; }
+        decimal TotalPrice { get; }
         IList<IProduct> Products { get; }
     }
 }
