@@ -62,7 +62,7 @@ namespace PreMarket.Core
 
         private void RemoveAllRevertedCommand()
         {
-            Commands.RemoveAll(c => Commands.IndexOf(c) >= _lastExecutedCommandPosition + 1);
+            Commands.RemoveAll(c => Commands.IndexOf(c) > _lastExecutedCommandPosition);
         }
     }
 }
