@@ -5,6 +5,5 @@ namespace PreMarket.Cupon
     public interface ICartCupon
     {
         decimal GetTotalPrice(IShoppingCartManager cartManaget);
-        ICartCupon Copy();
     }
 }

@@ -48,7 +48,7 @@ namespace PreMarket.Core
                 throw new ArgumentNullException(nameof(product));
             }
 
-            var lastUsedCuppon = product.Cupon?.Copy();
+            var lastUsedCuppon = product.Cupon;
 
             _commandManager
                 .ExecuteCommand(
@@ -78,7 +78,7 @@ namespace PreMarket.Core
 
         public void SetCartCupon(ICartCupon cartCupon)
         {
-            var lastUsedCuppon = _cartCupon?.Copy();
+            var lastUsedCuppon = _cartCupon;
 
             _commandManager.ExecuteCommand(
                 () => _cartCupon = cartCupon,
